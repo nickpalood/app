@@ -1,0 +1,51 @@
+
+@font-face {
+  font-family: "Apercu";
+  src: url("assets/fonts/Apercu_Regular.otf");
+  font-weight: normal;
+}
+
+
+
+.default-text-size {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Apercu', sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*
+:root {
+    --fg-colour: rgb(255,255,255);
+    --bg-colour: rgb(22, 22, 22);
+    --bg-colour-transparent: rgba(22, 22, 22, 0.505);
+    --accent-colour: rgb(240,0,0);
+    --shadow-colour: rgb(78, 78, 78);
+    --border-colour: rgba(100, 100, 100, 0.307);
+}
+*/
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: 0;
+    list-style: none;
+    border: none;
+}

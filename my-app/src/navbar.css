@@ -1,0 +1,105 @@
+
+
+.navbar-parent {
+    width: 100%;
+    height: fit-content;
+    z-index: 2;
+    
+}
+
+.navbar {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 10px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    box-shadow: 0px 10px 20px -10px black;
+    color: var(--fg-colour);
+    transition: top 1s ease;
+    justify-content: space-between;
+}
+
+.navbar>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar>div>a {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--fg-colour);
+    font-weight: bold;
+    
+}
+
+.navbar>div>button{
+    margin: 0px 10px;
+}
+
+.navbar>div>a::after {
+    content: "";
+    display: block;
+    color: oklch(var(--bc));
+    outline: solid 1px oklch(var(--bc));
+    width: 0%;
+    height: 0px;
+    margin: 0 auto;
+    animation: unwiden 0.2s cubic-bezier(0, 0.6, 0.38, 0.75);
+    opacity: 0;
+}
+
+.navbar>div>a:hover::after {
+    animation: widen 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    opacity: 1;
+}
+
+@keyframes widen {
+    0% {
+        width: 0%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes unwiden {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    98% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        width: 0%;
+
+    }
+}
+
+.background{
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background > img{
+    width: 100%;
+    filter: blur(50px) brightness(150%);
+}
